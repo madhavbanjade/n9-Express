@@ -1,0 +1,35 @@
+import mongoose from "mongoose";
+
+let webUserSchema = new mongoose.Schema({
+  fullName: {
+    type: String,
+    required: [true, " fullName field is required"],
+  },
+  email: {
+    type: String,
+    unique: true,
+    required: [true, "email field is required"],
+  },
+  password: {
+    type: String,
+    required: [true, "password field is required"],
+  },
+  dob: {
+    type: Date,
+    required: [true, " DOB field is required"],
+  },
+  gender: {
+    type: String,
+    required: [true, "Gender field is required"],
+  },
+  role: {
+    type: String,
+    required: [true, "Role field is required"],
+  },
+  isVerifiedEmail: {
+    type: Boolean,
+    required: [true, "isVerifiedEmail field is required"],
+  },
+});
+
+export default webUserSchema;

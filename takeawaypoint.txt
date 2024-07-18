@@ -1,0 +1,105 @@
+
+In package json add type:module, if we do so js will support import export feature.
+
+Frontend request backend to :-
+C: create => post
+R: read => get
+U: update => patch
+D: delete => delete
+
+Making api means frontend request backend and backend does the task according to
+the request.
+
+url = localhost:5000/trainees/123?name=madhav&age=20
+url = route?query
+route = baseurl + route params
+
+
+MongoDB Database
+we have to define structure of data 
+define array(model)
+name object
+define object(Schema)
+
+Rules of model 
+variable name must be the same as model name model name first letter always 
+be capital model name must be singular
+
+
+
+
+CRUD seq:
+// schema   // make new
+//model
+// controller  // the controller and routers are used side by side. //make new
+// routes     //make new
+// index
+
+
+
+classroom, collage, department, review
+
+
+
+
+in schema we  keep : 
+books : name.author, price, isAvailable.
+classRoom : name, numberOfBench , hasTv.
+collage: name, location.
+department : name, hod, totalMembers.
+review : productId , userId, description.
+
+
+first create product and user 
+product: quantity.
+student : studentImage, isMarried.
+teacher: subject.
+trainees: name and age and faculty.
+webUser : fullName , email, password, dob: date, gender,role,isverifiedEmail: boollen
+
+
+
+use hash and token and create
+
+
+Middleware :- 
+one request must have one response
+function which have req,res,next are called Middleware
+next() is used to trigger another Middleware
+
+Two  types of middleware based on error 
+Normal middleware =  (req,res,next) => {} to trigger another middleware
+next()
+error middleware = (err,req,next) => {} to trigger another middleware 
+next(err)
+
+Two types of middleware based on location 
+Route middleware =>  defined in route
+Application middleware => defined in index.js (or main file)
+
+
+HTTP status code :-
+ 1. informational respond =>  (100,199)
+ 2. successful respond  =>  (200,299)
+ 3. redirection message => (300,399)
+ 4. client error response => (400,499)
+ 5. server error response => (500,599)
+
+
+
+200 - create  
+200 - ok 
+400 - Bad request
+401 - Unauthorized
+403 -  Forbidden
+404 - Not found
+500 - internal server error
+
+webuser profile updated successfully.
+
+
+login management => 
+1. create user : hashedPassword, save in Database,  createToken, sentMail & sens res
+2. verify email : get data from Database, 
+
+
